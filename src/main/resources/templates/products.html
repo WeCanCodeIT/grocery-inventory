@@ -2,17 +2,20 @@
 <html>
 <head>
 	<title>Products</title>
+    <link rel="stylesheet" href="/css/normalize.css" />
 </head>
 <body>
-	<h1>All Products</h1>
-
-	<ul>
-		<li th:each="product : ${products}">
-			<a th:href="|@{/products/}${product.id}|"><!-- @{/products/} + ${product.id} -->
-				<span th:text="${product.name} + ': '"></span>
-				<span th:text="${product.description}"></span>
-			</a>
-		</li>
-	</ul>
+	<div class="wrapper">
+		<h1>All Products</h1>
+	
+		<ul>
+			<li th:each="product : ${products}">
+				<a th:href="|@{/products/}${product.id}|"><!-- @{/products/} + ${product.id} -->
+					<span th:text="${product.name} + ': '"></span>
+					<span th:text="${product.description}"></span>
+				</a>
+			</li>
+		</ul>
+	</div>
 </body>
 </html>

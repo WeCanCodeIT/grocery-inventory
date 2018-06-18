@@ -6,32 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title th:text="${product.name}"></title>
+    
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/normalize.css" />
 </head>
 
 <body>
-    <header>
-        <h1 th:text="${product.name}"></h1>
-    </header>
-
-    <main>
-        <ol>
-            <li>
-                <a href="/products">Products</a>
-            </li>
-            <li th:text="${product.name}"></li>
-        </ol>
-        <h2>
-            <span th:text="${product.name}"></span>
-            <span th:text="${product.price}"></span>
-        </h2>
-        <small th:text="${product.id}"></small>
-        <img th:src="${product.img}" alt="product image" />
-        <p th:text="${product.description}"></p>
-    </main>
-
-    <footer>
-        <small>Dondons Grocery</small>
-    </footer>
+	<div class="wrapper">
+	    <header>
+	        <h1>
+	        	<span th:text="${product.name}"></span>
+	        	<span>Something else</span>
+	        </h1>
+	    </header>
+	
+	    <main>
+	        <ol>
+	            <li>
+	                <a href="/products">Products</a>
+	            </li>
+	            <li th:text="${product.name}"></li>
+	        </ol>
+	        <h2>
+	            <span th:text="${product.name}"></span>
+	            <span th:text="${product.price}"></span>
+	        </h2>
+	        <small th:text="${product.id}"></small>
+	        <img th:src="${product.img}" alt="product image" class="first-image" />
+	        <img th:src="${product.img}" alt="product image" />
+	        <p th:text="${product.description}"></p>
+	        <ul class="tags">
+	        	<li th:each="tag : ${product.tags}" th:text="${tag.name}"></li>
+	        </ul>
+	    </main>
+	
+	    <footer>
+	        <small>Dondons Grocery</small>
+	    </footer>
+    </div>
 </body>
 
 </html>

@@ -1,0 +1,31 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font: 14px/1.618 sans-serif;
+}
+
+body {
+	background-image: linear-gradient(rgba(255,255,255, 0.5), rgba(255,255,255, 0.5)), 
+		url('https://media.takealot.com/covers_tsins/32073939/32073939_2-zoom.jpg?1518703118');
+	background-size: cover;
+	min-height: 100vh;
+}
+h1 {
+	font-size: 2rem;
+}
+h1 span {
+	font-size: 1.5em;
+}
+.first-image {
+	display: block;
+	margin: 1rem;
+	width: 20vw;
+}
+
+.tags {
+	font-family: Helvetica, Arial, sans-serif;
+}
