@@ -8,6 +8,7 @@ public class Product {
 	private String name;
 	private String description;
 	private BigDecimal price;
+	private String img;
 
 	public Long getId() {
 		return id;
@@ -25,10 +26,15 @@ public class Product {
 		return price;
 	}
 
-	public Product(Long id, String name, String description, BigDecimal price) {
+	public String getImg() {
+		return img;
+	}
+
+	public Product(Long id, String name, String description, String img, BigDecimal price) {
 		this.id = id;
 		this.name = name;
 		this.description = description;
+		this.img = img;
 		this.price = price;
 	}
 

@@ -16,7 +16,7 @@ public class GroceryInventoryRepositoryTest {
 	
 	@Test
 	public void addProductsShouldAddProductsToMap() {
-		Product test = new Product(1L, "", "", new BigDecimal("10.00"));
+		Product test = new Product(1L, "", "", "", new BigDecimal("10.00"));
 		
 		int sizeBeforeNewProduct = testRepo.getProducts().size();
 		testRepo.addProduct(test);
